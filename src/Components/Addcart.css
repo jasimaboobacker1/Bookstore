@@ -1,0 +1,10 @@
+
+
+
+@media only screen and (max-width: 730px) {
+    .box-container{
+        display: flex;
+        flex-direction: column;
+    }
+	
+	}

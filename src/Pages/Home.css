@@ -1,0 +1,27 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+/*  */
+.book-container{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap:15px;
+  padding: 30px;
+}
+.book-container .book{
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    border-radius: 5px;
+    background: #fff;
+    text-align: center;
+    padding:10px;
+    height: auto;
+
+    
+   
+}
+.book-container .book img{
+  height: 100%;
+}
+

@@ -1,0 +1,39 @@
+
+
+.sidebar {
+    width: 200px;
+    height: 800px;
+    background-color: #023246;
+    color: white;
+    padding: 20px;
+  }
+
+  header div, nav {
+    display: flex;
+    align-items: flex-start;
+    
+}
+
+  .sidebar ul {
+    list-style: none;
+    margin-top: 100px;
+    padding: 0;
+  }
+  
+  .sidebar li {
+    margin-bottom: 10px;
+  }
+  
+  .sidebar a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .app {
+    display: flex;
+  }
+  
+  .content {
+    padding: 20px;
+  }
+  
