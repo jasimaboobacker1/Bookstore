@@ -95,10 +95,10 @@ function Addbook() {
                   </Form.Group> 
                      <div className='d-flex  justify-content-center align-items-center '>
                           <div className='me-3'>
-                              <Link to={'/booksmanage'}><button className='btn btn-dark' onClick={handleclose}>CANCEL</button></Link>
+                              <Link to={'/booksmanage'}><button className='btn text-light' style={{ width: "auto", backgroundColor: "#009879" }} onClick={handleclose}>CANCEL</button></Link>
                           </div>
                           <div className='ms-3'>
-                          <button className='btn btn-dark' onClick={handlesell} >Add</button>
+                          <button className='btn text-light' style={{ width: "auto", backgroundColor: "#009879" }} onClick={handlesell} >Add</button>
        
                     </div>
                    </div>

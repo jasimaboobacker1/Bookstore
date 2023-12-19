@@ -46,7 +46,7 @@ function BooksManage() {
         <h1 className="heading text-dark">BOOKS</h1>
         <center>
           <Link to={'/addbook'}>
-            <button className='btn text-light ms-5 me-5 mb-2 ' style={{ width: "auto", backgroundColor: "#023246" }}>Add New Books</button>
+            <button className='btn text-light ms-5 me-5 mb-2 ' style={{ width: "auto", backgroundColor: "#009879" }}>Add New Books</button>
           </Link>
         </center>
 
@@ -62,7 +62,7 @@ function BooksManage() {
               <h6>Book Name: {book.bookname}</h6>
               <h6>Author: {book.author}</h6>
               <h6>Price: &#8377;{book.price}</h6>
-              <button className='btn' onClick={() => handlebookdelete(book._id)}>Delete</button>
+              <button className='btn' style={{ width: "auto", backgroundColor: "#009879" }} onClick={() => handlebookdelete(book._id)}>Delete</button>
             </div>
           ))}
         </div>

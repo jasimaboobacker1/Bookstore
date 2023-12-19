@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { useState,useEffect } from 'react'
 import { getusers,deleteuser } from '../Services/allAPI'
 import Adminnav from './Adminnav'
+import './Users.css'
 
 function UserManage() {
     const[allusers,setallusers]=useState([])
@@ -43,7 +44,7 @@ function UserManage() {
        <div className="tablecontainer d-flex flex-column align-items-center mt-5 " style={{width:"100%",height:"100vh"}}>
         <h1>Users Table</h1>
        
-         <table className='rounded shadow-lg bg-light text-dark  ' style={{width:"900px"}}>
+        <table className='content-table rounded shadow-lg bg-light text-dark border' style={{ width: '900px' }}>
             <thead className='border'>
           
                 <tr >
@@ -61,7 +62,7 @@ function UserManage() {
          <td className='p-3'>{users.username}</td>
          <td>{users.password}</td>
          <td>{users.email}</td>
-         <td><button className='btn btn-danger' onClick={e=>handledeleteuser(users)}>Block User</button></td>
+         <td><button className='btn text-light' style={{backgroundColor:"#009879"}} onClick={e=>handledeleteuser(users)}>Block User</button></td>
        </tr>
         )): <h3 className='text-danger text-center'>No Users</h3>
        }
