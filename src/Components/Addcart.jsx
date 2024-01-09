@@ -11,9 +11,9 @@ import { OrderAPI } from '../Services/allAPI';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Link } from 'react-router-dom';
-
 function Addcart() {
-  const { addthings } = useContext(addcontext);
+  const { addthings, setaddthings } = useContext(addcontext);
+
  
 
   const [show, setShow] = useState(false);
@@ -85,6 +85,13 @@ function Addcart() {
     
   }
 
+  
+  const handleremove = (bookToRemove) => {
+   
+    const updatedBooks = addthings.filter(book => book !== bookToRemove);
+    setaddthings(updatedBooks);
+  };
+
   return (
     <>
       <Header />
@@ -109,7 +116,7 @@ function Addcart() {
   
 
 
-    <div className="box m-3">
+    <div className="box m-3" style={{width:"300px"}}>
        <img
                         src={book ? `${BASE_URL}/Uploads/${book?.bookImage}` : "Uploads\\image-1701440853878-its.png"}
                         style={{ height: '300px', width: '100%',borderRadius:"0px" }}
@@ -119,6 +126,12 @@ function Addcart() {
        <h6>Book Name: {book.bookname}</h6>
        <h6>Author: {book.author}</h6>
        <h6>Price: {book.price}</h6>
+       <i
+               class="fa-solid fa-cart-shopping "
+                style={{ cursor: 'pointer',color:"red" }}
+                onClick={() => handleremove(book)}
+              ></i>
+      
     </div>
      ))
      ) : (

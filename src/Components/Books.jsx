@@ -52,6 +52,12 @@ function Books() {
     // Navigate to /orderform and pass the selectedBook details as state
     navigate('/orderform', { state: { selectedBook: selectedBook } });
   };
+  const [isLiked, setIsLiked] = useState(false);
+
+  const handleLike = () => {
+    setIsLiked(!isLiked);
+  };
+
 
   return (
     <>
@@ -77,6 +83,10 @@ function Books() {
               <h6>Book Name: {book.bookname}</h6>
               <h6>Author: {book.author}</h6>
               <h6>Price: &#8377;{book.price}</h6>
+             
+       
+       <i className="fa-sharp fa-solid fa-heart" style={{ cursor: 'pointer', color: isLiked ? 'red' : 'black' }} onClick={handleLike}></i>
+
               <i
                 className="fa-solid fa-cart-shopping m-2 ms-2"
                 style={{ cursor: 'pointer' }}
@@ -90,6 +100,7 @@ function Books() {
               >
                 Buy
               </Button>
+             
             </div>
           ))}
         </div>

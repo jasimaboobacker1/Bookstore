@@ -24,7 +24,7 @@ function Adminhome() {
   return (
     <>
       <Adminnav />
-      <div style={{ height: '150px', width:"50%" }} className="border rounded shadow p-2 bg-light text-dark d-flex align-items-center justify-content-center my-2">
+      <div style={{ height: '150px', width:"100%" }} className="border rounded shadow p-2 bg-light text-dark d-flex align-items-center justify-content-center my-2">
         <h2>
           <i className="fa-solid fa-users me-2"></i>
           No Of Users: {userCount}
